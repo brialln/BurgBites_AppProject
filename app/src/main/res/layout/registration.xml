@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_mob">
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="140dp"
+        android:text="SIGN UP"
+        android:textColor="#F87537"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmailAddress"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/textfields"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUsername" />
+
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/textfields"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignPassword" />
+
+    <CheckBox
+        android:id="@+id/cbShowConfirmPass"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F87537"
+        android:text="Show Password"
+        android:textColor="#040867"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+
+    <EditText
+        android:id="@+id/etSignUsername"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/textfields"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreate" />
+
+    <EditText
+        android:id="@+id/etSignPassword"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/textfields"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailAddress" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#040867"
+        android:text="Sign Up"
+        android:textColor="#C3F8FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+
+    <TextView
+        android:id="@+id/tvOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="8dp"
+        android:text="or"
+        android:textColor="#040867"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+    <Button
+        android:id="@+id/btnContinueLogin"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#F87537"
+        android:text="Continue to Login"
+        android:textColor="#C3F8FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOr" />
+
+    <TextView
+        android:id="@+id/tvCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="13dp"
+        android:text="Create your account"
+        android:textColor="#040867"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
+
+    <CheckBox
+        android:id="@+id/cbShowPass"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F87537"
+        android:text="Show Password"
+        android:textColor="#040867"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignPassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
