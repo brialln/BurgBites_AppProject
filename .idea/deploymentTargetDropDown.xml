@@ -2,11 +2,36 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="app">
+      <entry key="AccountActivity">
         <State />
       </entry>
-      <entry key="registration">
+      <entry key="Home">
         <State />
+      </entry>
+      <entry key="MainActivity">
+        <State />
+      </entry>
+      <entry key="OrdersActivity">
+        <State />
+      </entry>
+      <entry key="PersonalSystemActivity">
+        <State />
+      </entry>
+      <entry key="app">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\brian\.android\avd\Medium_Phone_API_24.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-05-23T14:39:40.109502200Z" />
+        </State>
       </entry>
     </value>
   </component>

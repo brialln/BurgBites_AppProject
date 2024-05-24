@@ -3,28 +3,29 @@ package com.example
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import com.example.databinding.RegistrationBinding
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.example.databinding.SignupActivityBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class registration : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: RegistrationBinding
+    private lateinit var binding: SignupActivityBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = RegistrationBinding.inflate(layoutInflater)
+        Thread.sleep(3000)
+        installSplashScreen()
+        binding = SignupActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // password view hide
@@ -61,9 +62,10 @@ class registration : AppCompatActivity() {
                 if (password == confirmPassword) {
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, login::class.java)
+                            val intent = Intent(this, LoginActivity::class.java)
                             Toast.makeText(this, "Account Successfully Created.", Toast.LENGTH_LONG).show()
                             startActivity(intent)
+                            finish()
                         } else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                         }
@@ -79,26 +81,11 @@ class registration : AppCompatActivity() {
         // direct to login activity
         val btnContinueLogin = findViewById<Button>(R.id.btnContinueLogin)
         btnContinueLogin.setOnClickListener{
-            val Intent = Intent(this,login::class.java)
+            val Intent = Intent(this,LoginActivity::class.java)
             startActivity(Intent)
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)

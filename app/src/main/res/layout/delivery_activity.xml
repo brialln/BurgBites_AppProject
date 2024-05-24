@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="410dp"
+        android:layout_height="661dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBites">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".OrdersActivity"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-8dp">
+
+            <TextView
+                android:id="@+id/tvMyDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:text="My Delivery Status"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivToPay"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="27dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyDelivery"
+                app:srcCompat="@drawable/to_pay" />
+
+            <ImageView
+                android:id="@+id/ivToShip"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="78dp"
+                app:layout_constraintStart_toEndOf="@+id/ivToPay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/to_ship" />
+
+            <ImageView
+                android:id="@+id/ivToReceive"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="78dp"
+                app:layout_constraintStart_toEndOf="@+id/ivToShip"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/to_receive" />
+
+            <ImageView
+                android:id="@+id/ivToReview"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="78dp"
+                app:layout_constraintStart_toEndOf="@+id/ivToReceive"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/to_review" />
+
+            <ImageView
+                android:id="@+id/ivToCancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="78dp"
+                app:layout_constraintStart_toEndOf="@+id/ivToReview"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/to_cancel" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="9dp"
+                android:text="To Pay"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivToPay" />
+
+            <TextView
+                android:id="@+id/tvToReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="9dp"
+                android:text="To Receive"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/ivToReceive" />
+
+            <TextView
+                android:id="@+id/tvCancelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="9dp"
+                android:text="Cancelled"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/ivToCancel" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="9dp"
+                android:text="To Ship"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/ivToShip" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="9dp"
+                android:text="To Review"
+                app:layout_constraintStart_toEndOf="@+id/tvToReceived"
+                app:layout_constraintTop_toBottomOf="@+id/ivToReview" />
+
+            <TextView
+                android:id="@+id/tvReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="43dp"
+                android:text="Received"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="133dp"
+                android:layout_marginTop="214dp"
+
+                android:text="No Received Items Yet."
+                android:textColor="@color/dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="15dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyDelivery"
+                app:srcCompat="@drawable/baseline_circle_notifications_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <SearchView
+        android:id="@+id/svSearchBar"
+        android:layout_width="362dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="407dp"
+        android:layout_height="73dp"
+        android:backgroundTint="@color/blue_white"
+        android:elevation="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+    <TextView
+        android:id="@+id/tvBites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria_regular"
+        android:text="BITES"
+        android:textColor="@color/dark_blue"
+        android:textSize="38dp"
+        app:layout_constraintStart_toEndOf="@+id/tvBurg"
+        app:layout_constraintTop_toBottomOf="@+id/svSearchBar" />
+
+    <TextView
+        android:id="@+id/tvBurg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/jomhuria_regular"
+        android:text="BURG"
+        android:textColor="@color/orange"
+        android:textSize="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svSearchBar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

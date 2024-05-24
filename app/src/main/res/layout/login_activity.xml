@@ -6,16 +6,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_mob">
 
-    <TextView
-        android:id="@+id/tvLogin"
+    <ImageView
+        android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="203dp"
-        android:text="WELCOME"
-        android:textColor="#F87537"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="156dp"
+        android:src="@drawable/burg_bites_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,21 +20,21 @@
         android:id="@+id/tvEnterCredentials"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="15dp"
-        android:text="Enter your credentials"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="2dp"
+        android:text="Enter your credentials to login"
         android:textColor="#040867"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBites" />
 
     <EditText
         android:id="@+id/etLoginUsername"
         android:layout_width="300dp"
         android:layout_height="58dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/textfields"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/text_fields"
         android:ems="10"
         android:hint="Email or Username"
         android:inputType="text"
@@ -53,7 +50,7 @@
         android:layout_height="58dp"
         android:layout_marginStart="55dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/textfields"
+        android:background="@drawable/text_fields"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -69,14 +66,14 @@
         android:layout_width="300dp"
         android:layout_height="58dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#040867"
         android:text="Login"
-        android:textColor="#C3F8FF"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLoginPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/cbShowPass" />
 
     <Button
         android:id="@+id/btnCreateAccount"
@@ -86,7 +83,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#F87537"
         android:text="Create an account"
-        android:textColor="#C3F8FF"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +114,29 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etLoginPassword" />
+
+    <TextView
+        android:id="@+id/tvBites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria_regular"
+        android:text="BITES"
+        android:textColor="@color/dark_blue"
+        android:textSize="38dp"
+        app:layout_constraintStart_toEndOf="@+id/tvBurg"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvBurg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:fontFamily="@font/jomhuria_regular"
+        android:text="BURG"
+        android:textColor="@color/orange"
+        android:textSize="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

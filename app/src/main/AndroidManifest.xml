@@ -7,43 +7,56 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="App Project"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RegLog"
+        android:theme="@style/Theme.AppProject"
         tools:targetApi="31">
         <activity
-            android:name=".registration"
-            android:exported="true"
-            android:theme="@style/Theme.RegLog">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+            android:name=".CheckoutActivity"
+            android:exported="false" />
         <activity
-            android:name=".login"
-            android:exported="true"
-            android:theme="@style/Theme.RegLog">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+            android:name=".ShopActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".toPayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrdersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AccountActivity"
             android:exported="true"
-            android:theme="@style/Theme.RegLog">
+            android:theme="@style/Theme.AppProject" />
+        <activity
+            android:name=".DeliveryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppProject" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppProject" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppProject" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppProject">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PersonalSystemActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppProject" />
     </application>
 
 </manifest>

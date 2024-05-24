@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RegLog"
+rootProject.name = "AppProject"
 include(":app")
  
